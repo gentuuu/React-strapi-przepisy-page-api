@@ -15,7 +15,7 @@ const DietItem = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`https://strapi-render-1-h1tv.onrender.com/api/diety?filters[slug]=${slug}&populate=*`);
+          const response = await axios.get(`http://localhost:1337/api/diety?filters[slug]=${slug}&populate=*`);
           setPost(response.data.data[0]);
         } catch (error) {
           console.error('Error fetching data: ', error);
