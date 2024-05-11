@@ -1,0 +1,14 @@
+@import '../../styles.scss';
+
+.recipe {
+    margin-top: 35px; 
+    &-content{
+        display: flex;
+        @include breakpoint(tab-land){
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+ 
+   

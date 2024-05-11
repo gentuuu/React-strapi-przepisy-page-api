@@ -1,0 +1,93 @@
+@import '../../../styles.scss';
+
+.diet{
+    margin-top: 62px; 
+    &-title {
+        font-family: "Heebo", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.5px; 
+        @include breakpoint(phone){
+            font-size: 20px;
+            line-height: 22px;
+        }
+    }
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 33px;
+        margin-top: 25px; 
+        @include breakpoint(big-land){
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+        @include breakpoint(tab-port){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint(phone){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        padding: 36px 23px 10px;
+        min-height: 346px; 
+        &:hover {
+            background: #FFFFFF;
+            box-shadow: 0px 12px 24px rgba(68, 68, 68, 0.1);
+            border-radius: 10px; 
+        }
+        &__img {
+            width: 100%;
+            height: 192px;
+            margin: 0 auto; 
+            @include breakpoint(phone){
+                width: 100%;
+                height: 250px;
+            }
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__title {
+            font-family: "Heebo", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 23px;
+            letter-spacing: 0.5px;
+            color: #333333;
+            margin-top: 15px; 
+        }
+        &__category {
+            font-family: "Heebo", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 19px;
+            letter-spacing: 0.5px;
+            color: #747474;
+            margin-top: 20px; 
+        }
+        &__btn {
+            visibility: hidden;
+            position: absolute;
+            bottom: 22px;
+            right: 22px; 
+        }
+    }
+    
+}
+
+
+.popular-coffee-item:hover .popular-coffee__btn {
+     visibility: visible;   
+}
+

@@ -1,0 +1,148 @@
+@import '../../../styles.scss';
+
+
+.recipe-right {
+    margin-left: 33px; 
+    @include breakpoint (tab-land){
+        margin-left: 0px;
+    }
+    &-primary {
+        font-family: "Heebo", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 0.5px;
+        color: #333333; 
+    }
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 31px;
+        margin-top: 30px; 
+        @include breakpoint(big-land){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint (tab-land){
+            margin-bottom: 30px;
+        }
+        @include breakpoint (xs){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+
+.recipe-item{
+    &-last {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+        background: #F4F4F4;
+        border-radius: 10px;
+        font-family: "Heebo", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 37px;
+        letter-spacing: 0.5px;
+        color: #333333;
+        margin-right: 15px; 
+    }
+    &__img {
+        position: relative;
+        height: 300px;
+        border-radius: 10px; 
+        @include breakpoint(phone){
+            height: 250px;
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; 
+        }
+    }
+    &__title {
+        font-family: "Heebo", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: #333333;
+        margin-top: 10px; 
+    }
+    &__category {
+        position: absolute;
+        top: 10px;
+        left: 27px; 
+        &-item {
+            font-family: "Heebo", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+            padding: 1px 7px;
+            background: #56CCF2;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: 15px; 
+        }
+    }
+    &__hover {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        transition: visibility 0.3s; 
+        &-items {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly; 
+        }
+        &-item {
+            text-align: center;
+
+            // display: flex;
+            // flex-direction: column; 
+            & svg {
+                width: 45px;
+                height: 45px;
+                color: #FFFFFF;
+                background: #eb5757;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            & p {
+                font-family: "Heebo", sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 22px;
+                text-align: center;
+                letter-spacing: 0.5px;
+                color: #000000; 
+            }
+        }
+    }
+
+
+}
+
+.recipe-item__img:hover .recipe-item__hover {
+      visibility: visible; 
+}
+
+
+

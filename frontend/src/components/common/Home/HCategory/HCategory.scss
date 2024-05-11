@@ -1,0 +1,34 @@
+.category {
+    padding: 50px 0; 
+    &-item{
+        &__title {
+            font-family: "Heebo", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 19px;
+            letter-spacing: 0.5px;
+            color: #333333;
+            margin-top: 25px; 
+        }
+        &__img{
+            height: 180px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+            }
+        } 
+        
+        
+        
+        &__all {
+            font-family: "Heebo", sans-serif;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 19px;
+            letter-spacing: 0.5px;
+            color: #333333; 
+        }
+    }    
+}

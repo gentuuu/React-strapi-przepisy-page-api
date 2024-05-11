@@ -1,0 +1,113 @@
+@import './../../styles.scss';
+
+
+.page-blogs{
+    padding: 50px 0;
+    &-title{
+        font-family: "Heebo", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 0.5px;
+        color: #333333;
+    }
+    &-items{
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 35px;
+        @include breakpoint(tab-land){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint(phone){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        // @include breakpoint(xs){
+        //     grid-template-columns: repeat(1, 1fr);
+        // }
+    }
+
+    &-item {
+        background: #F4F4F4;
+        box-shadow: 0px 12px 24px rgba(68, 68, 68, 0.1);
+        border-radius: 10px; 
+        &:nth-child(1) {
+            grid-column: 1 / 4;
+            display: flex;
+            padding: 10px;
+            @include breakpoint(tab-land){
+                grid-column: 1 / 2;
+                flex-direction: column;
+            }
+            // @include breakpoint(phone){
+            //     grid-column: 1 / 2;
+            // }
+            & .page-blogs-item-row {
+                width: 40%;
+                @include breakpoint(tab-land){
+                    width: 100%;
+                }
+            }
+            & .page-blogs-item__img {
+                width: 60%;
+                height: auto;
+                margin-right: 44px;
+                @include breakpoint(tab-land){
+                    height: 303px;
+                    width: 100%;
+                }
+            }
+            & .page-blogs-item__title{
+                padding: 10px 0;
+            }
+            & .page-blogs-item__text{
+                font-family: "Heebo", sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.5px;
+                color: #000000; 
+                display: inline;
+                @include breakpoint(tab-land){
+                    display: none;
+                }
+            }
+          
+        }
+        &__img {
+            height: 303px; 
+            // @include breakpoint(tab-land){
+            //     height: auto;
+            // }
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px; 
+            }
+        }
+        &__title {
+            font-family: "Heebo", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.5px;
+            color: #000000;
+            padding: 10px;
+        }
+        &__text {
+            display: none;
+        }
+        &-row {
+            // width: 50%;
+            display: flex;
+            flex-direction: column; 
+        }
+    }
+
+
+}
+

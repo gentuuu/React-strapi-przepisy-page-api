@@ -1,0 +1,51 @@
+/* line 1, scss/components/_footer.scss */
+.main-footer {
+    margin-top: 100px;
+    background: #FAFAFA;
+    padding-bottom: 35px; }
+    /* line 5, scss/components/_footer.scss */
+    .main-footer-top {
+      display: flex;
+      justify-content: space-between; }
+      /* line 8, scss/components/_footer.scss */
+      .main-footer-top-1 {
+        margin-left: 50px;
+        width: 180px;
+        height: 30px;
+        margin-top: 32px; }
+        @media only screen and (max-width: 768px) {
+          /* line 8, scss/components/_footer.scss */
+          .main-footer-top-1 {
+            margin-left: 0; } }
+      /* line 18, scss/components/_footer.scss */
+      .main-footer-top-2 {
+        margin-top: -75px; }
+        @media only screen and (max-width: 768px) {
+          /* line 18, scss/components/_footer.scss */
+          .main-footer-top-2 {
+            display: none; } }
+    /* line 25, scss/components/_footer.scss */
+    .main-footer-bottom {
+      margin-left: 50px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between; }
+      @media only screen and (max-width: 768px) {
+        /* line 25, scss/components/_footer.scss */
+        .main-footer-bottom {
+          flex-direction: column;
+          margin-left: 0; } }
+    /* line 35, scss/components/_footer.scss */
+    .main-footer-copyright {
+      font-family: "Heebo", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 30px;
+      color: #000000; }
+    /* line 43, scss/components/_footer.scss */
+    .main-footer-social {
+      width: 50px;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 100px; }
